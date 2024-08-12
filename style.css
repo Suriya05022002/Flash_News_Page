@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    background: #3e3232;
+    font-family: 'Poppins', sans-sherif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.ticker {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 60px;
+    margin: 0 auto;
+}
+.news {
+    width: 76%;
+    background: #cc4444;
+    padding: 0 2%;
+}
+.title {
+    width: 20%;
+    text-align: center;
+    background: #c81c1c;
+    position: relative;
+}
+.title:after {
+    position: absolute;
+    content: "";
+    right: -16%;
+    border-left: 20px solid #c81c1c;
+    border-top: 33px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 33px solid transparent;
+    top: 0;
+}
+.title h5 {
+    font-size: 18px;
+    margin: 8% 0;
+}
+.news marquee {
+    font-size: 18px;
+}
+
+@media (max-width: 480px) {
+    .ticker {
+        width: 100%;
+        height: auto; /* Adjust height to fit content */
+        flex-direction: row; /* Keep elements side by side */
+    }
+
+    .news {
+        width: 75%; /* Slightly reduced width to make space for the title */
+        padding: 0 2%;
+        font-size: 14px; /* Adjust font size for readability */
+    }
+
+    .title {
+       
+        text-align: center; /* Keep title centered */
+    }
+
+    .title h5 {
+        font-size: 16px; /* Adjust font size for readability */
+        margin: 5% 0; /* Adjusted margin */
+    }
+
+    .title:after {
+        display: none; /* Hide the arrow shape for a cleaner look on small screens */
+    }
+
+    .news marquee {
+        font-size: 14px; /* Adjust font size */
+    }
+}
